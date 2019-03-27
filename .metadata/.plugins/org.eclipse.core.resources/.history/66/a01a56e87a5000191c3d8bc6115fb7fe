@@ -1,0 +1,5 @@
+import static Admin.MIN_AGE;
+
+public class Person {
+
+}

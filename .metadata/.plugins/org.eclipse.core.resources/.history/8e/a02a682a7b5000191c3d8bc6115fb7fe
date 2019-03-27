@@ -1,0 +1,6 @@
+
+public class Admin {
+	
+	public static int MIN_AGE=18;
+
+}

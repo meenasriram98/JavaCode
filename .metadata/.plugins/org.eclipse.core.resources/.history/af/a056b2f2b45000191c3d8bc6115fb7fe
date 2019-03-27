@@ -1,0 +1,10 @@
+
+public class Admin {
+	
+	public static int MIN_AGE=18;
+	public static void main(String args[])
+	{
+		Person p=new Person();
+		p.print();
+	}
+}

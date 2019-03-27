@@ -1,0 +1,7 @@
+
+public class Person {
+public void print()
+{
+	System.out.println(Admin.MIN_AGE);
+}
+}

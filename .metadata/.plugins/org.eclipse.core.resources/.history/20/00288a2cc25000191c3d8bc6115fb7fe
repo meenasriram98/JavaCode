@@ -1,0 +1,47 @@
+
+public class Person {
+private String name;
+private String Male="m";
+private String Female="f";
+private int age;
+private String gender;
+
+Person(String name,String gender,int age)
+{
+	this.name=name;
+	this.gender=gender;
+	this.age=age;
+}
+
+
+public boolean CanVote()
+{
+	return CompareSmallLarge(age,Admin.MIN_AGE_TO_VOTE);
+}
+
+public boolean CanDrive()
+{
+	return CompareSmallLarge(age,Admin.MIN_AGE_TO_DRIVE);
+}
+
+public boolean CanGetMarried()
+{
+	return(IsMale()&&CompareSmallLarge(age,Admin.MIN_AGE_FOR_MAN_TOGET_MARRIED)||
+			IsFemale()&&CompareSmallLarge(age,Admin.MIN_AGE_FOR_GIRL_TOGET_MARRIED));
+}
+
+public boolean IsMale()
+{
+return gender.equals("m");
+}
+
+public boolean IsFemale()
+{
+return gender.equals("f");
+}
+}
+
+public boolean CompareSmallLarge(int age,int limit) {
+return age>limit;
+}
+}
