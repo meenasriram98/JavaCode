@@ -7,28 +7,31 @@ public class ArraySample {
 		int even_number=2;
 		int odd_number=1;
 		int outer=0,inner=0;
-		for(outer=0;outer<array1.length;outer+=2)
+		for(outer=0;outer<array1.length;outer++)
 		{
-			for(inner=0;inner<array1.length;inner++)
+			if(outer%2==0)
 			{
-				
-					array1[inner][outer]=even_number;
-					even_number+=2;
+				for(inner=0;inner<array1.length;inner++)
+				{
 					
+						array1[inner][outer]=even_number;
+						even_number+=2;
+						
+				}
 			}
-			
+				else
+				{
+					for(inner=0;inner<array1.length;inner++)
+					{
+						
+							array1[inner][outer]=odd_number;
+							odd_number+=2;
+										
+					}
+				}
 			
 		}
-		for(outer=1;outer<array1.length;outer+=2)
-		{
-			for(inner=0;inner<array1.length;inner++)
-			{
-				
-					array1[inner][outer]=odd_number;
-					odd_number+=2;
-								
-			}
-		}
+		
 		
 		for(outer=0;outer<array1.length;outer++)
 		{
