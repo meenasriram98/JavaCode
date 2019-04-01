@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -35,8 +36,17 @@ public class collectionsTest {
                           collect(Collectors.toList()); 
         System.out.println(result1); 
         
+        
         //example of  map,filter and collect
         List<String> nums = Arrays.asList("1", "2", "3", "4", "5", "6");
+        
+        Iterator<String> iterator=nums.iterator();
+        
+        while(iterator.hasNext())
+        {
+        	String n=iterator.next();
+        	System.out.println(n);
+        }
 
         System.out.println("original: " + nums);
 
